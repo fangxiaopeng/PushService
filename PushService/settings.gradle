@@ -1,1 +1,1 @@
-include ':app', ':websocket', ':mqqt'
+include ':app', ':websocket', ':mqtt'
