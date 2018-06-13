@@ -34,3 +34,14 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+
+repositories {
+    maven {
+        url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
+    }
+}
+
+dependencies {
+    compile "org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.1"
+    compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+}
