@@ -1,9 +1,12 @@
 package com.example.mqtt;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.example.mqtt.service.MQTTService;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions;
@@ -18,6 +21,7 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 /**
  * Description: 基于mqtt（https://github.com/eclipse/paho.mqtt.android）实现推送
+ * 此Activity中实现方式未验证。MQTTService中实现方式验证成功。
  *
  * Author: fxp
  * Create at: 2018.06.13
@@ -51,9 +55,13 @@ public class MainActivity extends AppCompatActivity {
 
         context = getApplicationContext();
 
-        initMQTT();
+        Log.e("MainActivity", "onCreate");
 
-        connectToMQTT();
+        context.startService(new Intent(context, MQTTService.class));
+
+//        initMQTT();
+
+//        connectToMQTT();
     }
 
     private void initMQTT() {
