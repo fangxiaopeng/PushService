@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 /**
  * Description: 基于socket实现推送
+ * 未验证（无可用后台环境）
  *
  * Author: fxp
  * Create at: 2018.06.13
