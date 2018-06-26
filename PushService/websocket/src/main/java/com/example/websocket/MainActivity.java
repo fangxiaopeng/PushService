@@ -27,6 +27,7 @@ import okio.ByteString;
 
 /**
  * Description: 基于OkHttp（https://github.com/square/okhttp）提供的WebSocket接口实现推送
+ * 验证成功
  *
  * Author: fxp
  * Create at: 2018.06.13
@@ -46,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String port = "9236";
 
     private String service = "/websocket/";
+
+    private String userCode = "xxx";
 
     private String url;
 
@@ -85,8 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         context = getApplicationContext();
 
-        url = protocol + ip + ":" + port + service;
-
+        url = protocol + ip + ":" + port + service + userCode;
     }
 
     private void initViews(){
