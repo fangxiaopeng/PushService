@@ -54,7 +54,7 @@ public class MQTTService extends Service {
 
     private String userId = "421a56d5-7df9-4b49-b1e9-aebf7282f28c";
 
-    private String userCode = "zhanglimin";
+    private String userCode = "xxx";
 
     /**
      * 设备IMEI
@@ -64,7 +64,7 @@ public class MQTTService extends Service {
     /**
      * 订阅主题（前半部分）
      */
-    private String TOPIC_BASE = "hiboard_";
+    private String TOPIC_BASE = "xxx_";
 
     /**
      * 订阅主题 - 根据userId
